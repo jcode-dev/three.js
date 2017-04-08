@@ -19,7 +19,8 @@ Menubar.Examples = function ( editor ) {
 	// Examples
 
 	var items = [
-		{ title: 'ブロックくずし', file: 'arkanoid.app.json' },
+		{ title: 'サンプル', file: 'japanfirst.app.json' },
+	{ title: 'ブロックくずし', file: 'arkanoid.app.json' },
 		{ title: 'カメラぐるぐる', file: 'camera.app.json' },
 		{ title: '粒子', file: 'particles.app.json' },
 		{ title: 'ピンポン', file: 'pong.app.json' },
