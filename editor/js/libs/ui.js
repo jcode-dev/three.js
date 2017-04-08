@@ -1,6 +1,64 @@
 /**
+ * localization
+ */
+
+var _ = (function() {
+
+	var lang = navigator.language || (window.navigator.languages && window.navigator.languages[0]) || window.navigator.language || window.navigator.userLanguage || window.navigator.browserLanguage;
+	var message = {};
+	message.ja = {
+
+	"Any unsaved data will be lost. Are you sure?": "保存していないデータは消えますが、よろしいですか？",
+	"SCENE"		: "シーン",
+	"PROJECT"	: "プロジェクト",
+	"SETTINGS": "設定",
+	"OBJECT": "オブジェクト",
+	"GEOMETRY": "かたち",
+	"MATERIAL": "そざい",
+
+	"Background": "背景",
+	"Fog": "かすみ",
+	"Type": "タイプ",
+	"Name": "なまえ",
+
+	"Position": "位置",
+	"Rotation": "回転",
+	"Scale": "大きさ",
+	"Shadow": "影",
+	"Visible": "見える",
+	"SCRIPT": "スクリプト",
+
+	"Color": "いろ",
+	"Emissive": "放射",
+	"Specular": "鏡面",
+	"Shininess": "光沢",
+	"Vertex Colors": "頂点色",
+	"Skinning": "なめらかに",
+
+	"File"	: "ファイル",
+	"Edit"	: "編集",
+	"Add"		: "追加",
+	"Play"	: "実行",
+	"Stop"	: "停止",
+	"Examples": "サンプル",
+	"Help"	: "ヘルプ"
+	};
+	message[ "ja-JP" ] = message.ja;
+
+	return function(value) {
+		if ( message[ lang ] !== undefined ) {
+			if ( message[ lang ][ value ] !== undefined ) {
+				value =  message[ lang ][ value ];
+			}
+		}
+		return value;
+	};
+}());
+
+/**
  * @author mrdoob / http://mrdoob.com/
  */
+
 
 var UI = {};
 
@@ -104,7 +162,7 @@ UI.Element.prototype = {
 
 	setTextContent: function ( value ) {
 
-		this.dom.textContent = value;
+		this.dom.textContent = _( value );
 
 		return this;
 

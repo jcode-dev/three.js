@@ -101,12 +101,12 @@ Sidebar.Object = function ( editor ) {
 	var objectPositionY = new UI.Number().setWidth( '50px' ).onChange( update );
 	var objectPositionZ = new UI.Number().setWidth( '50px' ).onChange( update );
 
-	objectPositionRow.add( new UI.Text( 'Position' ).setWidth( '90px' ) );
+	objectPositionRow.add( new UI.Text( _('Position') ).setWidth( '90px' ) );
 	objectPositionRow.add( objectPositionX, objectPositionY, objectPositionZ );
 
 	container.add( objectPositionRow );
 
-	// rotation
+	// rotation もじ
 
 	var objectRotationRow = new UI.Row();
 	var objectRotationX = new UI.Number().setStep( 10 ).setUnit( '°' ).setWidth( '50px' ).onChange( update );

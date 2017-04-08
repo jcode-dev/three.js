@@ -19,11 +19,11 @@ Menubar.Examples = function ( editor ) {
 	// Examples
 
 	var items = [
-		{ title: 'Arkanoid', file: 'arkanoid.app.json' },
-		{ title: 'Camera', file: 'camera.app.json' },
-		{ title: 'Particles', file: 'particles.app.json' },
-		{ title: 'Pong', file: 'pong.app.json' },
-		{ title: 'Shaders', file: 'shaders.app.json' }
+		{ title: 'ブロックくずし', file: 'arkanoid.app.json' },
+		{ title: 'カメラぐるぐる', file: 'camera.app.json' },
+		{ title: '粒子', file: 'particles.app.json' },
+		{ title: 'ピンポン', file: 'pong.app.json' },
+		{ title: 'シェーダー', file: 'shaders.app.json' }
 	];
 
 	var loader = new THREE.FileLoader();
@@ -39,7 +39,7 @@ Menubar.Examples = function ( editor ) {
 			option.setTextContent( item.title );
 			option.onClick( function () {
 
-				if ( confirm( 'Any unsaved data will be lost. Are you sure?' ) ) {
+				if ( confirm( _('Any unsaved data will be lost. Are you sure?' ) ) ) {
 
 					loader.load( 'examples/' + item.file, function ( text ) {
 
