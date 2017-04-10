@@ -15,16 +15,16 @@
 			"generator": "Object3D.toJSON"
 		},
 		"object": {
-			"uuid": "45FE51A0-1192-460A-A115-012836D5C7DD",
+			"uuid": "94C8A54E-5311-4684-8A86-F6BF1EF043F5",
 			"type": "PerspectiveCamera",
 			"name": "カメラ",
-			"matrix": [0.593498,0,-0.804835,0,-0.245397,0.952383,-0.180959,0,0.766512,0.304903,0.565238,0,473.825153,188.478292,349.405974,1],
+			"matrix": [0.721106,0,-0.692824,0,-0.140926,0.979094,-0.146678,0,0.67834,0.203407,0.706031,0,500.170791,149.981496,520.588749,1],
 			"fov": 50,
 			"zoom": 1,
 			"near": 0.1,
 			"far": 100000,
 			"focus": 10,
-			"aspect": 1.886654,
+			"aspect": 1.051402,
 			"filmGauge": 35,
 			"filmOffset": 0
 		}
@@ -134,27 +134,6 @@
 			"matrix": [1,0,0,0,0,1,0,0,0,0,1,0,0,0,0,1],
 			"children": [
 				{
-					"uuid": "B7CBBC6F-EC26-49B5-8D0D-67D9C535924B",
-					"type": "Group",
-					"name": "ダミー",
-					"matrix": [1,0,0,0,0,1,0,0,0,0,1,0,0,100,400,1],
-					"children": [
-						{
-							"uuid": "60B69C58-4201-43FD-815E-AD2EDFBBD0CE",
-							"type": "PerspectiveCamera",
-							"name": "パースペクティブカメラ",
-							"matrix": [-1,0,0,0,0,1,0,0,0,0,-1,0,0,0,0,1],
-							"fov": 50,
-							"zoom": 1,
-							"near": 100,
-							"far": 10000,
-							"focus": 10,
-							"aspect": 1,
-							"filmGauge": 35,
-							"filmOffset": 0
-						}]
-				},
-				{
 					"uuid": "A460C230-DC88-4A8F-A3FB-AA0FE735F3ED",
 					"type": "Mesh",
 					"name": "プレイン",
@@ -181,8 +160,8 @@
 				{
 					"uuid": "B855E267-A266-4098-ACD6-6A1FDE7B88BA",
 					"type": "Mesh",
-					"name": "いこさへドロン",
-					"matrix": [1,0,0,0,0,1,0,0,0,0,1,0,130,-10,0,1],
+					"name": "たま",
+					"matrix": [1,0,0,0,0,1,0,0,0,0,1,0,130,-10,-82.581963,1],
 					"geometry": "4DECFAB5-6FD1-4D84-9A29-565807B074EA",
 					"material": "E1826901-7922-4584-A25D-6D487E2C9BBD"
 				},
@@ -190,7 +169,7 @@
 					"uuid": "E2939A7B-5E40-438A-8C1B-32126FBC6892",
 					"type": "PointLight",
 					"name": "ポイントライト 1",
-					"matrix": [1,0,0,0,0,1,0,0,0,0,1,0,-93.860001,127.129997,-114.300003,1],
+					"matrix": [1,0,0,0,0,1,0,0,0,0,1,0,-79.698736,148.278869,-78.958858,1],
 					"color": 9474221,
 					"intensity": 0.75,
 					"distance": 0,
@@ -214,7 +193,7 @@
 					"uuid": "3412781E-27CC-43C3-A5DB-54C0C8E42ED6",
 					"type": "PointLight",
 					"name": "ポイントライト 2",
-					"matrix": [1,0,0,0,0,1,0,0,0,0,1,0,88.129997,8.31,125.449997,1],
+					"matrix": [1,0,0,0,0,1,0,0,0,0,1,0,113.785546,143.894845,231.762417,1],
 					"color": 12773063,
 					"intensity": 1,
 					"distance": 0,
@@ -238,20 +217,10 @@
 		}
 	},
 	"scripts": {
-		"60B69C58-4201-43FD-815E-AD2EDFBBD0CE": [
-			{
-				"name": "プレイヤー カメラ",
-				"source": ""
-			}],
-		"B7CBBC6F-EC26-49B5-8D0D-67D9C535924B": [
-			{
-				"name": "オービット",
-				"source": ""
-			}],
 		"3741222A-BD8F-401C-A5D2-5A907E891896": [
 			{
 				"name": "script",
-				"source": "var box1 = this.getObjectByName( 'ボックス' );\nvar c1 = this.getObjectByName( 'いこさへドロン' );\nvar p1 = this.getObjectByName( 'シリンダー' );\n\tconsole.log(box1);\nvar position = {};\nposition.x = camera.position.x;\nposition.y = camera.position.y;\nposition.z = camera.position.z;\n\nfunction update( event ) {\n\n\tvar time = event.time * 0.0001;\n\n\tbox1.rotation.x = time * 2;\n\tbox1.rotation.y = time * 1;\n\tp1.rotation.x = time * 1;\n\tp1.rotation.y = time * 20;\n\n\tcamera.position.x = position.x + Math.sin( time ) * 100;\n\tcamera.position.y = position.y + Math.cos( time ) * 100;\n\tthis.lookAt( scene.position );\n\n}\nfunction mousemove( event ) {\n\n\tc1.position.z = ( event.clientY / player.width ) * 800 - 400;\n\tc1.position.x = ( event.clientX / player.width ) * 700 - 350;\n\n}\n\n"
+				"source": "var box1 = this.getObjectByName( 'ボックス' );\nvar c1 = this.getObjectByName( 'たま' );\nvar p1 = this.getObjectByName( 'シリンダー' );\n\tconsole.log(box1);\nvar position = {};\nposition.x = camera.position.x;\nposition.y = camera.position.y;\nposition.z = camera.position.z;\nvar c1p = {};\nc1p.x = c1.position.x;\nc1p.y = c1.position.y;\nc1p.z = c1.position.z;\n\nfunction update( event ) {\n\n\tvar time = event.time * 0.0001;\n\n\tbox1.rotation.x = time * 2;\n\tbox1.rotation.y = time * 1;\n\tp1.rotation.x = time * 1;\n\tp1.rotation.y = time * 20;\n\n\tcamera.position.x = position.x + Math.sin( time ) * 100;\n\tcamera.position.y = position.y + Math.cos( time ) * 100;\n\tthis.lookAt( scene.position );\n\n}\nvar drag = false;\nfunction mousedown( event ) {\n\tdrag = true;\n}\nfunction mouseup( event ) {\n\tdrag = false;\n}\nfunction mousemove( event ) {\n\n\tif ( drag ) {\n\t\tc1.position.z = c1p.z + ( event.clientY / player.width ) * 600 - 300;\n\t\tc1.position.x = c1p.x + ( event.clientX / player.width ) * 600 - 300;\n\t}\n\n}\n\n"
 			}]
 	}
 }
