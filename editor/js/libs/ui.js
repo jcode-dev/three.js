@@ -51,6 +51,7 @@ var _ = (function() {
 				value =  message[ lang ][ value ];
 			}
 		}
+		console.log ( value );
 		return value;
 	};
 }());
@@ -287,7 +288,7 @@ UI.Text = function ( text ) {
 	dom.style.verticalAlign = 'middle';
 
 	this.dom = dom;
-	this.setValue( text );
+	this.setValue( _( text ) );
 
 	return this;
 
@@ -986,7 +987,7 @@ UI.Button = function ( value ) {
 	dom.className = 'Button';
 
 	this.dom = dom;
-	this.dom.textContent = value;
+	this.dom.textContent = _( value );
 
 	return this;
 

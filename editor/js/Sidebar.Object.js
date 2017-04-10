@@ -113,7 +113,7 @@ Sidebar.Object = function ( editor ) {
 	var objectRotationY = new UI.Number().setStep( 10 ).setUnit( '°' ).setWidth( '50px' ).onChange( update );
 	var objectRotationZ = new UI.Number().setStep( 10 ).setUnit( '°' ).setWidth( '50px' ).onChange( update );
 
-	objectRotationRow.add( new UI.Text( 'Rotation' ).setWidth( '90px' ) );
+	objectRotationRow.add( new UI.Text( _('Rotation') ).setWidth( '90px' ) );
 	objectRotationRow.add( objectRotationX, objectRotationY, objectRotationZ );
 
 	container.add( objectRotationRow );
