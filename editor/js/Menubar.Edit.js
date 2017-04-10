@@ -20,7 +20,7 @@ Menubar.Edit = function ( editor ) {
 
 	var undo = new UI.Row();
 	undo.setClass( 'option' );
-	undo.setTextContent( 'Undo (Ctrl+Z)' );
+	undo.setTextContent( _('Undo (Ctrl+Z)') );
 	undo.onClick( function () {
 
 		editor.undo();
@@ -32,7 +32,7 @@ Menubar.Edit = function ( editor ) {
 
 	var redo = new UI.Row();
 	redo.setClass( 'option' );
-	redo.setTextContent( 'Redo (Ctrl+Shift+Z)' );
+	redo.setTextContent( _('Redo (Ctrl+Shift+Z)' ));
 	redo.onClick( function () {
 
 		editor.redo();
@@ -86,7 +86,7 @@ Menubar.Edit = function ( editor ) {
 
 	var option = new UI.Row();
 	option.setClass( 'option' );
-	option.setTextContent( 'Clone' );
+	option.setTextContent(_( 'Clone') );
 	option.onClick( function () {
 
 		var object = editor.selected;
@@ -104,7 +104,7 @@ Menubar.Edit = function ( editor ) {
 
 	var option = new UI.Row();
 	option.setClass( 'option' );
-	option.setTextContent( 'Delete (Del)' );
+	option.setTextContent( _('Delete (Del)') );
 	option.onClick( function () {
 
 		var object = editor.selected;

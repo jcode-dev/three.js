@@ -7,8 +7,12 @@ var _ = (function() {
 	var lang = navigator.language || (window.navigator.languages && window.navigator.languages[0]) || window.navigator.language || window.navigator.userLanguage || window.navigator.browserLanguage;
 	var message = {};
 	message.ja = {
+		"translate"		: "移動",
+		"rotate"		: "回転",
+		"scale"		: "大きさ",
+		"New"		: "新規",
+		"Import"		: "読み込み",
 
-	"Any unsaved data will be lost. Are you sure?": "保存していないデータは消えますが、よろしいですか？",
 	"SCENE"		: "シーン",
 	"PROJECT"	: "プロジェクト",
 	"SETTINGS": "設定",
@@ -35,6 +39,33 @@ var _ = (function() {
 	"Vertex Colors": "頂点色",
 	"Skinning": "なめらかに",
 
+
+
+	"Publish":"かきだし",
+	'Undo (Ctrl+Z)':"とりけし",
+	'Redo (Ctrl+Shift+Z)':"とりけさない",
+	'Clone':"クローンをつくる",
+	'Delete (Del)':"けす",
+	"Any unsaved data will be lost. Are you sure?": "保存していないデータは消えますが、よろしいですか？",
+'Group': "グループ",
+'Plane': "平面",
+'Box': "箱",
+'Circle': "円",
+'Cylinder': "筒",
+'Sphere': "球",
+'Icosahedron': "二面体",
+'Torus': "ドーナツ",
+'TorusKnot': "トーラスむすびめ",
+'Lathe': "Lathe",
+'Sprite': "Sprite",
+'PointLight': "ポイント ライト",
+'SpotLight': "スポット ライト",
+'DirectionalLight': "指向ライト",
+'HemisphereLight': "半球ライト",
+'AmbientLight': "Ambientライト",
+'PerspectiveCamera': "カメラ",
+'Source code': "ソースコード",
+
 	"File"	: "ファイル",
 	"Edit"	: "編集",
 	"Add"		: "追加",
@@ -49,6 +80,8 @@ var _ = (function() {
 		if ( message[ lang ] !== undefined ) {
 			if ( message[ lang ][ value ] !== undefined ) {
 				value =  message[ lang ][ value ];
+			} else {
+				console.log(value);
 			}
 		}
 		console.log ( value );
@@ -922,9 +955,9 @@ UI.Integer.prototype.setValue = function ( value ) {
 };
 
 UI.Integer.prototype.setStep = function ( step ) {
-	
-	this.step = parseInt( step ); 
-	
+
+	this.step = parseInt( step );
+
 	return this;
 
 };
