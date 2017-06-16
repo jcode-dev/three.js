@@ -15,7 +15,7 @@
 		"object": {
 			"uuid": "C7FB195B-270E-47B4-95C9-1754652A9D11",
 			"type": "PerspectiveCamera",
-			"name": "カメラ",
+			"name": "Camera",
 			"fov": 50,
 			"aspect": 1.2252042007001167,
 			"near": 0.1,
@@ -100,19 +100,19 @@
 		"object": {
 			"uuid": "3741222A-BD8F-401C-A5D2-5A907E891896",
 			"type": "Scene",
-			"name": "シーン",
+			"name": "Scene",
 			"matrix": [1,0,0,0,0,1,0,0,0,0,1,0,0,0,0,1],
 			"children": [
 				{
 					"uuid": "B7CBBC6F-EC26-49B5-8D0D-67D9C535924B",
 					"type": "Group",
-					"name": "ダミー",
+					"name": "Dummy",
 					"matrix": [1,0,0,0,0,1,0,0,0,0,1,0,0,100,400,1],
 					"children": [
 						{
 							"uuid": "60B69C58-4201-43FD-815E-AD2EDFBBD0CE",
 							"type": "PerspectiveCamera",
-							"name": "パースペクティブカメラ",
+							"name": "PerspectiveCamera",
 							"fov": 50,
 							"aspect": 1,
 							"near": 100,
@@ -123,7 +123,7 @@
 				{
 					"uuid": "A460C230-DC88-4A8F-A3FB-AA0FE735F3ED",
 					"type": "Mesh",
-					"name": "プレイン",
+					"name": "Plane",
 					"geometry": "51BB3E54-D2DF-4576-9953-FB8E940588B5",
 					"material": "4AE8130E-B6A8-47BC-ACCF-060973C74044",
 					"matrix": [1,0,0,0,0,0.040785226970911026,-0.9991679191589355,0,0,0.9991679191589355,0.040785226970911026,0,0,-50,0,1]
@@ -131,7 +131,7 @@
 				{
 					"uuid": "26DAAD69-725D-43B7-AF9D-990A99DEF8C5",
 					"type": "Mesh",
-					"name": "ボックス",
+					"name": "Box",
 					"geometry": "D8E200D3-27BC-49F8-A5C5-7384206E70FE",
 					"material": "B5943856-E404-45D9-A427-4774202C2CD0",
 					"matrix": [1,0,0,0,0,1,0,0,0,0,1,0,0,0,0,1]
@@ -139,7 +139,7 @@
 				{
 					"uuid": "AAAFF2D6-4725-4AFC-A9FE-26419B11011F",
 					"type": "Mesh",
-					"name": "シリンダー",
+					"name": "Cylinder",
 					"geometry": "25BA32DB-8B02-4ABA-A77C-69868C464A1A",
 					"material": "3F872310-2067-4BE4-9250-5B3F4E43797E",
 					"matrix": [1,0,0,0,0,1,0,0,0,0,1,0,-130,-15,0,1]
@@ -147,7 +147,7 @@
 				{
 					"uuid": "B855E267-A266-4098-ACD6-6A1FDE7B88BA",
 					"type": "Mesh",
-					"name": "いこさへドロン",
+					"name": "Icosahedron",
 					"geometry": "4DECFAB5-6FD1-4D84-9A29-565807B074EA",
 					"material": "E1826901-7922-4584-A25D-6D487E2C9BBD",
 					"matrix": [1,0,0,0,0,1,0,0,0,0,1,0,130,-10,0,1]
@@ -155,7 +155,7 @@
 				{
 					"uuid": "E2939A7B-5E40-438A-8C1B-32126FBC6892",
 					"type": "PointLight",
-					"name": "ポイントライト 1",
+					"name": "PointLight 1",
 					"color": 9474221,
 					"intensity": 0.75,
 					"distance": 0,
@@ -165,7 +165,7 @@
 				{
 					"uuid": "3412781E-27CC-43C3-A5DB-54C0C8E42ED6",
 					"type": "PointLight",
-					"name": "ポイントライト 2",
+					"name": "PointLight 2",
 					"color": 12773063,
 					"intensity": 1,
 					"distance": 0,
@@ -177,12 +177,12 @@
 	"scripts": {
 		"60B69C58-4201-43FD-815E-AD2EDFBBD0CE": [
 			{
-				"name": "プレイヤー カメラ",
+				"name": "Player Camera",
 				"source": "player.setCamera( this );"
 			}],
 		"B7CBBC6F-EC26-49B5-8D0D-67D9C535924B": [
 			{
-				"name": "オービット",
+				"name": "Orbit",
 				"source": "function update( event ) {\n\n\tvar time = event.time * 0.001;\n\n\tthis.position.x = Math.sin( time ) * 400;\n\tthis.position.z = Math.cos( time ) * 400;\n\tthis.lookAt( scene.position );\n\n}"
 			}]
 	}
