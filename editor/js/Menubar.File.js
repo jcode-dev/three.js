@@ -299,7 +299,7 @@ Menubar.File = function ( editor ) {
 
 			} );
 
-			loader.load( webvrdir + 'node_modules/webvr-polyfill/build/webvr-ui.min.js', function ( content ) {
+			loader.load( webvrdir + 'node_modules/webvr-ui/build/webvr-ui.min.js', function ( content ) {
 
 				zip.file( 'js/webvr-ui.min.js', content );
 
