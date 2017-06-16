@@ -19,12 +19,11 @@ Menubar.Examples = function ( editor ) {
 	// Examples
 
 	var items = [
-		{ title: 'サンプル', file: 'japanfirst.app.json' },
-	{ title: 'ブロックくずし', file: 'arkanoid.app.json' },
-		{ title: 'カメラぐるぐる', file: 'camera.app.json' },
-		{ title: '粒子', file: 'particles.app.json' },
-		{ title: 'ピンポン', file: 'pong.app.json' },
-		{ title: 'シェーダー', file: 'shaders.app.json' }
+		{ title: _('Arkanoid'), file: 'arkanoid.app.json' },
+		{ title: _('Camera'), file: 'camera.app.json' },
+		{ title: _('Particles'), file: 'particles.app.json' },
+		{ title: _('Pong'), file: 'pong.app.json' },
+		{ title: _('Shaders'), file: 'shaders.app.json' }
 	];
 
 	var loader = new THREE.FileLoader();
