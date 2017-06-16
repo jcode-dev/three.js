@@ -244,6 +244,16 @@ Menubar.File = function ( editor ) {
 		} );
 
 		var loader = new THREE.FileLoader( manager );
+
+		if ( vr ) {
+
+			loader.load( 'webvr/index.html', function ( content ) {
+
+				zip.file( 'index.html', content );
+
+			} );
+
+		} else {
 		loader.load( 'js/libs/app/index.html', function ( content ) {
 
 			var includes = [];
@@ -261,9 +271,10 @@ Menubar.File = function ( editor ) {
 			zip.file( 'index.html', content );
 
 		} );
-		loader.load( 'js/libs/app.js', function ( content ) {
+		}
+		loader.load( 'webvr/app-bp.js', function ( content ) {
 
-			zip.file( 'js/app.js', content );
+			zip.file( 'js/app-bp.js', content );
 
 		} );
 		loader.load( '../build/three.min.js', function ( content ) {
@@ -274,6 +285,26 @@ Menubar.File = function ( editor ) {
 
 		if ( vr ) {
 
+			var webvrdir = "../../webvr-boilerplate/";
+
+			loader.load( webvrdir + 'node_modules/es6-promise/dist/es6-promise.min.js', function ( content ) {
+
+				zip.file( 'js/es6-promise.min.js', content );
+
+			} );
+
+			loader.load( webvrdir + 'node_modules/webvr-polyfill/build/webvr-polyfill.min.js', function ( content ) {
+
+				zip.file( 'js/webvr-polyfill.min.js', content );
+
+			} );
+
+			loader.load( webvrdir + 'node_modules/webvr-ui/build/webvr-ui.min.js', function ( content ) {
+
+				zip.file( 'js/webvr-ui.min.js', content );
+
+			} );
+
 			loader.load( '../examples/js/controls/VRControls.js', function ( content ) {
 
 				zip.file( 'js/VRControls.js', content );
@@ -283,12 +314,6 @@ Menubar.File = function ( editor ) {
 			loader.load( '../examples/js/effects/VREffect.js', function ( content ) {
 
 				zip.file( 'js/VREffect.js', content );
-
-			} );
-
-			loader.load( '../examples/js/WebVR.js', function ( content ) {
-
-				zip.file( 'js/WebVR.js', content );
 
 			} );
 
