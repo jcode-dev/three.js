@@ -106,7 +106,7 @@ Sidebar.Object = function ( editor ) {
 
 	container.add( objectPositionRow );
 
-	// rotation もじ
+	// rotation
 
 	var objectRotationRow = new UI.Row();
 	var objectRotationX = new UI.Number().setStep( 10 ).setUnit( '°' ).setWidth( '50px' ).onChange( update );
