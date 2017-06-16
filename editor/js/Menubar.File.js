@@ -272,9 +272,9 @@ Menubar.File = function ( editor ) {
 
 		} );
 		}
-		loader.load( 'webvr/app.js', function ( content ) {
+		loader.load( 'webvr/app-bp.js', function ( content ) {
 
-			zip.file( 'js/app.js', content );
+			zip.file( 'js/app-bp.js', content );
 
 		} );
 		loader.load( '../build/three.min.js', function ( content ) {
@@ -305,15 +305,15 @@ Menubar.File = function ( editor ) {
 
 			} );
 
-			loader.load( '../examples/js/VRControls.js', function ( content ) {
+			loader.load( '../examples/js/controls/VRControls.js', function ( content ) {
 
 				zip.file( 'js/VRControls.js', content );
 
 			} );
 
-			loader.load( '../examples/js/VREffect.js', function ( content ) {
+			loader.load( '../examples/js/effects/VREffect.js', function ( content ) {
 
-				zip.file( 'js/WebVR.js', content );
+				zip.file( 'js/VREffect.js', content );
 
 			} );
 
