@@ -224,7 +224,7 @@ Sidebar.Material = function ( editor ) {
 
 	} ).onChange( update );
 
-	materialVertexColorsRow.add( new UI.Text( _('Vertex Colors') ).setWidth( '90px' ) );
+	materialVertexColorsRow.add( new UI.Text( 'Vertex Colors' ).setWidth( '90px' ) );
 	materialVertexColorsRow.add( materialVertexColors );
 
 	container.add( materialVertexColorsRow );
@@ -234,7 +234,7 @@ Sidebar.Material = function ( editor ) {
 	var materialSkinningRow = new UI.Row();
 	var materialSkinning = new UI.Checkbox( false ).onChange( update );
 
-	materialSkinningRow.add( new UI.Text( _('Skinning') ).setWidth( '90px' ) );
+	materialSkinningRow.add( new UI.Text( 'Skinning' ).setWidth( '90px' ) );
 	materialSkinningRow.add( materialSkinning );
 
 	container.add( materialSkinningRow );

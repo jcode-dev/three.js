@@ -26,7 +26,7 @@ var _ = (function() {
   'Export Scene' : 'Export Scene',
   'Export OBJ' : 'Export OBJ',
   'Export STL' : 'Export STL',
-  'Publish' : 'かきだし',
+  'Publish' : '書き出し',
   'かきだし' : 'かきだし',
   'Edit' : '編集',
   'Undo (Ctrl+Z)' : 'とりけし',
@@ -36,7 +36,7 @@ var _ = (function() {
   'Clear History' : 'Clear History',
   'Clone' : 'クローンをつくる',
   'クローンをつくる' : 'クローンをつくる',
-  'Delete (Del)' : 'けす',
+  'Delete (Del)' : '削除(Del)',
   'けす' : 'けす',
   'Minify Shaders' : 'Minify Shaders',
   'Add' : '追加',
@@ -155,8 +155,8 @@ var _ = (function() {
   'VR' : 'VR',
   'Theme' : 'Theme',
   'HISTORY' : 'HISTORY',
-  'persistent' : 'persistent'
-
+  'persistent' : 'persistent',
+	'Any unsaved data will be lost. Are you sure?' : '保存していないデータは消えますが、宜しいですか?'
 	};
 	message[ "ja-JP" ] = message.ja;
 

@@ -217,7 +217,7 @@ Menubar.File = function ( editor ) {
 
 	var option = new UI.Row();
 	option.setClass( 'option' );
-	option.setTextContent( _('Publish') );
+	option.setTextContent( 'Publish' );
 	option.onClick( function () {
 
 		var zip = new JSZip();
