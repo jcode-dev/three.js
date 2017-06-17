@@ -209,6 +209,23 @@ Menubar.File = function ( editor ) {
 	} );
 	options.add( option );
 
+	// Export app.json
+
+	var option = new UI.Row();
+	option.setClass( 'option' );
+	option.setTextContent( 'Export app.json' );
+	option.onClick( function () {
+
+		var output = editor.toJSON();
+		output.metadata.type = 'App';
+		delete output.history;
+		output = JSON.stringify( output, parseNumber, '\t' );
+		output = output.replace( /[\n\t]+([\d\.e\-\[\]]+)/g, '$1' );
+		saveString( output, 'app.json' );
+
+	} );
+	options.add( option );
+
 	//
 
 	options.add( new UI.HorizontalRule() );
