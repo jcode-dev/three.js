@@ -33,7 +33,7 @@ Menubar.File = function ( editor ) {
 	option.setTextContent( 'New' );
 	option.onClick( function () {
 
-		if ( confirm( 'Any unsaved data will be lost. Are you sure?' ) ) {
+		if ( confirm( _('Any unsaved data will be lost. Are you sure?' ) ) ) {
 
 			editor.clear();
 
