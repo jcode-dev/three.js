@@ -219,6 +219,7 @@ Menubar.File = function ( editor ) {
 		var output = editor.toJSON();
 		output.metadata.type = 'App';
 		delete output.history;
+		delete output.camera.object.children; // by koichii
 		output = JSON.stringify( output, parseNumber, '\t' );
 		output = output.replace( /[\n\t]+([\d\.e\-\[\]]+)/g, '$1' );
 		saveString( output, 'app.json' );

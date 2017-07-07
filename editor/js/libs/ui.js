@@ -153,6 +153,7 @@ var _ = (function() {
   'γ input' : 'γ input',
   'γ output' : 'γ output',
   'VR' : 'VR',
+  'VR Sample' : 'VRサンプル',
   'Theme' : 'Theme',
   'HISTORY' : 'HISTORY',
   'persistent' : 'persistent',
