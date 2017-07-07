@@ -19,7 +19,7 @@ Menubar.Examples = function ( editor ) {
 	// Examples
 
 	var items = [
-		{ title: 'VR サンプル', file: 'vrsample.app.json' },
+		{ title: _('VR Sample'), file: 'vrsample.app.json' },
 		{ title: _('Arkanoid'), file: 'arkanoid.app.json' },
 		{ title: _('Camera'), file: 'camera.app.json' },
 		{ title: _('Particles'), file: 'particles.app.json' },
