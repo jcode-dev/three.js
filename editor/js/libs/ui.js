@@ -1,4 +1,4 @@
-/**
+﻿/**
  * localization
  */
 
@@ -154,6 +154,7 @@ var _ = (function() {
   'γ output' : 'γ output',
   'VR' : 'VR',
   'VR Sample' : 'VRサンプル',
+	'Export app.json': 'app.jsonの かきだし',
   'Theme' : 'Theme',
   'HISTORY' : 'HISTORY',
   'persistent' : 'persistent',

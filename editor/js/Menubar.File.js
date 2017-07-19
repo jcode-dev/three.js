@@ -213,7 +213,7 @@ Menubar.File = function ( editor ) {
 
 	var option = new UI.Row();
 	option.setClass( 'option' );
-	option.setTextContent( 'Export app.json' );
+	option.setTextContent( _( 'Export app.json' ) );
 	option.onClick( function () {
 
 		var output = editor.toJSON();
