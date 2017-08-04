@@ -272,29 +272,37 @@ Menubar.File = function ( editor ) {
 			} );
 
 		} else {
-		loader.load( 'js/libs/app/index.html', function ( content ) {
+			loader.load( 'js/libs/app/index.html', function ( content ) {
 
-			var includes = [];
+				var includes = [];
 
-			if ( vr ) {
+				if ( vr ) {
 
-				includes.push( '<script src="js/VRControls.js"></script>' );
-				includes.push( '<script src="js/VREffect.js"></script>' );
-				includes.push( '<script src="js/WebVR.js"></script>' );
+					includes.push( '<script src="js/VRControls.js"></script>' );
+					includes.push( '<script src="js/VREffect.js"></script>' );
+					includes.push( '<script src="js/WebVR.js"></script>' );
 
-			}
+				}
 
-			content = content.replace( '<!-- includes -->', includes.join( '\n\t\t' ) );
+				content = content.replace( '<!-- includes -->', includes.join( '\n\t\t' ) );
 
-			zip.file( 'index.html', content );
+				zip.file( 'index.html', content );
 
-		} );
+			} );
 		}
-		loader.load( 'webvr/app-bp.js', function ( content ) {
+		if ( vr ) {
+			loader.load( 'webvr/app-bp.js', function ( content ) {
 
-			zip.file( 'js/app-bp.js', content );
+				zip.file( 'js/app-bp.js', content );
 
-		} );
+			} );
+		} else {
+			loader.load( 'js/libs/app.js', function ( content ) {
+
+				zip.file( 'js/app.js', content );
+
+			} );
+		}
 		loader.load( '../build/three.min.js', function ( content ) {
 
 			zip.file( 'js/three.min.js', content );
